@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Cancer Detection</title>
+    <link href="{{ url_for('static', filename='css/style1.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style2.css') }}" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    
+</head>
+<body data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-delay="0">
+    
+   
+    <div class="header">
+
+        <header class="header-content" style="position: sticky;">
+            <a href="" class="logo">
+
+            <img src="{{ url_for('static', filename='./img/StudySyn.svg') }}" alt="" class="logo-icon"/>
+            <span class="logo-text">SCD</span>
+            </a>
+
+            <nav class="nav" style="position: sticky;">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#features" class="nav-link">Features</a>
+                <button class="menu-button">
+                    <img src="{{ url_for('static', filename='./img/Hamburger.svg') }}" alt="" class="menu-icon">
+    
+                </button>
+
+            </nav>
+
+            
+            <!-- <a href="#contact" class="content-button">Contact Us</a>
+            <button class="menu-button">
+                <img src="./img/Hamburger.svg" alt="" class="menu-icon">
+
+            </button> -->
+
+            
+        </header>
+
+    </div>
+    
+    <div id="home" style=" height: 100%; width: 100%; scroll-behavior: smooth;">
+        <div class="content">
+            <section class="main-section">
+
+                <div class="content-left">
+                    <p class="section-label">very proud to introduce</p>
+                    <h1 class="section-title">Skin Cancer Detection
+                    </h1>
+                    <p class="section-desc"> Welcome to our Skin Cancer Detection website, where cutting-edge technology meets proactive healthcare. Our platform offers an innovative solution for early detection of skin cancer, leveraging advanced algorithms and Deep learning to analyze skin images with precision and accuracy. By simply uploading a photo, users can receive rapid evaluations, empowering them to take proactive steps in managing their skin health. With a user-friendly interface and reliable results, our mission is to promote early detection, ultimately saving lives through timely intervention. Join us in the fight against skin cancer and take control of your health today.</p>
+
+
+                    <div class="button-group">
+                        <a href="/eye-prediction" class="start-button"> Take Tour</a>
+                        <!-- <a href="#tour" class="tour-button"> Take Tour</a> -->
+                    </div>
+                </div>
+
+                <div class="content-right">
+                    <div class="image-container">
+                        <img src="{{ url_for('static', filename='./img/cover-1.jpg') }}" alt="" class="sectionImage">
+                    </div>
+                </div> 
+            </section>
+        </div>
+    </div>
+
+    <div id="features" style=" height: 100%; width: 100%; scroll-behavior: smooth;">
+        <div class="feature_container">
+            <div class="feature-content">
+                <div class="main-info">
+                <h1 class="main-title">Our competitive advantage</h1>
+                <p class="feature-text"></p>
+                </div>
+
+                <div class="feature-grid">
+                    <!-- card1 -->
+                    <div class="feature-card">
+                        <div class="icon-container">
+                            <img src="{{ url_for('static', filename='./img/PersonalizedLearn.svg') }}" alt="" class="feature-svg"/>
+                        </div>
+                        <div class="feature-info">
+                            <div class="feature-title">
+                                High Accuracy
+                            </div>
+                            <div class="feature-desc">
+                                Achieve high accuracy in skin cancer diagnosis through the integration of advanced imaging techniques and deep learning algorithms trained on extensive datasets.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 2 -->
+                    <div class="feature-card">
+                        <div class="icon-container">
+                            <img src="{{ url_for('static', filename='./img/PersonalizedLearn.svg') }}" alt="" class="feature-svg"/>
+                        </div>
+                        <div class="feature-info">
+                            <div class="feature-title">
+                                Early Detection
+                            </div>
+                            <div class="feature-desc">
+                                Enable early detection of skin cancer improving patient outcomes through timely treatment.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 3 -->
+                    <div class="feature-card">
+                        <div class="icon-container">
+                            <img src="{{ url_for('static', filename='./img/PersonalizedLearn.svg') }}" alt="" class="feature-svg"/>
+                        </div>
+                        <div class="feature-info">
+                            <div class="feature-title">
+                            User friendly interface
+                            </div>
+                            <div class="feature-desc">
+                                A user-friendly interface is a software interface where the user can easily understand and navigate through the application in an efficient way.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 4 -->
+                    <div class="feature-card">
+                        <div class="icon-container">
+                            <img src="{{ url_for('static', filename='./img/PersonalizedLearn.svg') }}" alt="" class="feature-svg"/>
+                        </div>
+                        <div class="feature-info">
+                            <div class="feature-title">
+                                Robustness
+                            </div>
+                            <div class="feature-desc">
+                                Ensure robustness through rigorous testing and validation processes, ensuring reliable performance in detecting a wide range of skin cancer.
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- footer -->
+    <div class="footer-container">
+        <footer class="footer">
+              
+            <div class="footer-copy-right">
+                @ 2024 - Present SCD. All rights reserved.
+            </div>  
+            </footer>
+            
+        </div>
+    </body>
+    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+    </html>
