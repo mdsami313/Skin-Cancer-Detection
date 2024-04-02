@@ -2,7 +2,6 @@ from flask import Flask, render_template, request, flash, redirect, url_for
 import tensorflow as tf
 import numpy as np
 import os
-import cv2
 import PIL
 
 app = Flask(__name__)
@@ -12,11 +11,11 @@ app.config['UPLOAD_FOLDER'] = "C:\\Users\\samis\\OneDrive\\Desktop\\Skin Cancer 
 
 extension_types = ["png", "jpg", "jpeg"]
 file_ext = ("docx", "csv", "pdf", "xlsx", "txt")
-classes = {4: ('nv', ' melanocytic nevi'),
+classes = {4: ('nv', 'melanocytic nevi'),
            6: ('mel', 'melanoma'),
            2 :('bkl', 'benign keratosis-like lesions'),
-           1:('bcc' , ' basal cell carcinoma'),
-           5: ('vasc', ' pyogenic granulomas and hemorrhage'),
+           1:('bcc' , 'basal cell carcinoma'),
+           5: ('vasc', 'pyogenic granulomas and hemorrhage'),
            0: ('akiec', 'Actinic keratoses and intraepithelial carcinomae'),
            3: ('df', 'dermatofibroma')}
 
@@ -54,10 +53,12 @@ def uploader():
             image = image.resize((28, 28))
             img_reshaped = np.array(image).reshape(-1, 28, 28, 3)
             pred = model.predict(img_reshaped)
+            print(pred)
             highest_acc = pred * 100
             accuracy = round(np.amax(highest_acc))
             # print(accuracy)
             pred_label = np.argmax(pred, 1)
+
 
             print(pred_label)
             disease = f"Detected: {classes[pred_label[0]][1]}."
